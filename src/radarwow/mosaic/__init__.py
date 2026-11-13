@@ -1,7 +1,6 @@
-"""radar-wow stage 8: compositing, mosaics and accumulation.
+"""radar-wow stage 8: multi-radar compositing and radar-to-radar comparison."""
 
-Planned algorithms (see README): MaxQualityMosaic, AdvectionAccumulation.
-"""
+from .composite import composite, mosaic_grid, mosaic_hourly, overlap_difference, quality_index, to_grid
 
-PLANNED = ['MaxQualityMosaic', 'AdvectionAccumulation']
-__all__: list[str] = []
+PLANNED = ["SeamlessHybridScan (Qi & Zhang 2017)"]
+__all__ = ["composite", "mosaic_grid", "mosaic_hourly", "overlap_difference", "quality_index", "to_grid"]
