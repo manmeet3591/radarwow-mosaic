@@ -190,14 +190,14 @@ plt.show()
 # - **A wet radome probably adds about 2 dB while it rains at the site.** fianj's difference to all three neighbours
 #   deepens by ~1.5-2.5 dB from 13:00 to 14:45, the heaviest rain at its site (4.8 mm/h in the gauge 9 km away), and
 #   the control pair does not move. The signal is weaker during the 15-16 UTC rain, so this is suggestive, not proven.
-# - **The shortfall against the gauges is shared and varies by area, not by radar:** 0.35 (fianj), 0.43 (fivih),
-#   0.65 (fipet), 1.37 (fikes, light rain, 36 gauge-hours), while the radars agree with each other within 1-2.4 dB.
+# - **The shortfall against the gauges is shared and varies by area, not by radar:** 0.40 (fianj), 0.46 (fivih),
+#   0.71 (fipet), 1.52 (fikes, light rain, 36 gauge-hours), while the radars agree with each other within 1-2.4 dB.
 #   So most of it comes from how reflectivity is turned into rain for this rain (the kind of problem the adaptive
 #   alpha solved at S band) or from rain forming below the beam, not from any one radar. Not resolved here.
 # - **A bug found by the mosaic.** Petajavesi stores PHIDP with a system offset of ~356 deg, so its phase folds at
 #   0/360 on every ray; our unfolding left 356 deg jumps, which ZPHI and R(A) turned into heavy rain (5.8x the gauges).
 #   radarwow-kdp now rotates each sweep to its circular-mean phase first; Petajavesi's ray phase span (99th
 #   percentile) fell from 345 to 18 deg, and the other seven radars changed by 0.3 % or less.
-# - **The mosaic** (max-quality and quality-weighted give nearly the same result) correlates with the gauges at
-#   0.83-0.86 with the shortfall above (bias 0.52). **With gauges** (conditional merging, leave-one-out) the error
-#   falls 37 % and the bias goes to 1.03, correlation 0.91.
+# - **The mosaic** (max-quality and quality-weighted give the same result) correlates with the gauges at 0.88 with
+#   the shortfall above (bias 0.58). **With gauges** (KED, leave-one-out) the error falls 42 % (MAE 0.50 -> 0.29 mm),
+#   bias 1.05, correlation 0.95. (Numbers after the FMI signal-mask fix in radarwow-core; see verify notebook 06.)
