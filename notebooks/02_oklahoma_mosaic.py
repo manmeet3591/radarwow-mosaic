@@ -100,7 +100,7 @@ plt.show()
 # %% [markdown]
 # ## Takeaways
 # - **The mosaic helps a little where KTLX already sees well.** Within 150 km of KTLX, correlation with the
-#   gauge-corrected reference goes from 0.90-0.97 (KTLX alone) to 0.92-0.98, and RMSE falls by up to 13 % (10-11 UTC);
+#   gauge-corrected reference goes from 0.90-0.97 (KTLX alone) to 0.92-0.98, and RMSE falls by up to 14 % (10-11 UTC);
 #   bias stays near 1 (1.00-1.12), better than MRMS radar-only (1.12-1.32).
 # - **It does not reach MRMS's pattern agreement** (0.97-0.99 near KTLX, 0.96-0.99 over the whole area against our
 #   0.92-0.98). Likely reasons: MRMS mosaics rain rates every 2 minutes from more radars before accumulating, while we
